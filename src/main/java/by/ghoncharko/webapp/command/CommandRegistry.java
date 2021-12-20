@@ -1,5 +1,7 @@
 package by.ghoncharko.webapp.command;
 
+import by.ghoncharko.webapp.entity.Role;
+
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
