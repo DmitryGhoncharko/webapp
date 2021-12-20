@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.nio.charset.Charset;
 
 @WebServlet("/controller")
 public class Controller extends HttpServlet {
@@ -25,18 +24,12 @@ public class Controller extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
-        System.out.println(Charset.defaultCharset());
-        System.out.println(req.getCharacterEncoding());
-        System.out.println(resp.getCharacterEncoding());
         LOG.trace("caught req and resp in doGet method");
         processRequest(req, resp);
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) {
-        System.out.println(Charset.defaultCharset());
-        System.out.println(req.getCharacterEncoding());
-        System.out.println(resp.getCharacterEncoding());
         LOG.trace("caught req and resp in doPost method");
         processRequest(req, resp);
     }
